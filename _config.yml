@@ -17,7 +17,7 @@ title: GitHub Pages Test Site
 email: brettnstewart@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Github Pages test site.
-baseurl: "pages" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
@@ -27,7 +27,7 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-#  - jekyll-paginate
+  - jekyll-paginate
 
 # Pagination
 paginate: 2
