@@ -9,18 +9,8 @@ layout: default
 
   {{ content }}
 
-  {% if paginator.page == 1 %}
-    {% assign num_featured_posts = 1 %}
-  {% else %}
-    {% assign num_featured_posts = 0 %}
-  {% endif %}
-
-
-  Featured posts: {{ num_featured_posts }}
-  Current page: {{ paginator.page }}
-
   {%- if paginator.posts.size > 0 -%}
-    {%- for post in paginator.posts limit:num_featured_posts -%}
+    {%- for post in paginator.posts limit:1 -%}
     <h1 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h1>
     <ul class="post-list">
       <li>
@@ -31,7 +21,7 @@ layout: default
 
     <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
     <ul class="post-list">
-      {%- for post in paginator.posts offset:num_featured_posts -%}
+      {%- for post in paginator.posts offset:1 -%}
       <li>
         {% include post-list-item.html post=post %}
       </li>
